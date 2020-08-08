@@ -42,9 +42,10 @@ function cellPhone(manufacturer, model, color, price) {
   };
 }
 //New cellphone
-var cellPhone = new cellPhone("Samsung", "Galaxy S20", "Cosmic Gray", "999.99");
+var cellPhone = new cellPhone("Samsung", "Galaxy S20", "Cosmic Gray", "$999.99");
 
 // output header
-console.log(header.display("Dan", "Ross", "Exercise 1.3\n"));
+console.log(header.display("Dan", "Ross", "Exercise 1.3"));
+console.log("\n")
 //output new cell phone
 console.log(cellPhone.getDetails());
