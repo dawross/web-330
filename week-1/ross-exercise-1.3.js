@@ -23,10 +23,12 @@ function cellPhone(manufacturer, model, color, price) {
   this.getPrice = function () {
     return this.price;
   };
+
   //get model
   this.getModel = function () {
     return this.model;
   };
+
   //get details
   this.getDetails = function () {
     return (
@@ -41,11 +43,15 @@ function cellPhone(manufacturer, model, color, price) {
     );
   };
 }
+
 //New cellphone
 var cellPhone = new cellPhone("Samsung", "Galaxy S20", "Cosmic Gray", "$999.99");
 
 // output header
 console.log(header.display("Dan", "Ross", "Exercise 1.3"));
+
+//new line
 console.log("\n")
+
 //output new cell phone
 console.log(cellPhone.getDetails());
