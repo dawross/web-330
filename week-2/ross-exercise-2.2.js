@@ -38,6 +38,3 @@ console.log("");
 //output
 console.log("The person's full name is " + dan.fullname + ".");
 console.log("The person's age is " + dan.age + ".");
-
-
-

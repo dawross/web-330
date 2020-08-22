@@ -12,39 +12,39 @@ const header = require("../ross-header.js");
 /**
  * Description: Function Car class
  * params: model
-*/
+ */
 function Car(model) {
   this.model = model;
 }
 //prototype method
-Car.prototype.start = function() {
-  console.log("Car added to the racetrack!")
-}
+Car.prototype.start = function () {
+  console.log("Car added to the racetrack!");
+};
 /**
  * Description: Function Truck class
  * params: model, year
-*/
+ */
 function Truck(model, year) {
   this.model = model;
-  this.year = year;  
+  this.year = year;
 }
 //prototype method
-Truck.prototype.start = function() {
-  console.log("Truck added to the racetrack!")
-}
+Truck.prototype.start = function () {
+  console.log("Truck added to the racetrack!");
+};
 /**
  * Description: Function Jeep class
  * params: model, year, color
-*/
+ */
 function Jeep(model, year, color) {
   this.model = model;
   this.year = year;
-  this.color = color;  
+  this.color = color;
 }
 //prototype method
-Jeep.prototype.start = function() {
-  console.log("Jeep added to the racetrack!")
-}
+Jeep.prototype.start = function () {
+  console.log("Jeep added to the racetrack!");
+};
 //racetrack array
 var racetrack = [];
 
@@ -59,12 +59,11 @@ var celica = new Car("Celica");
 var fordF150 = new Truck("F150", "2010");
 var wrangler = new Jeep("Wrangler", "2016", "White");
 
-
 // output header
 console.log(header.display("Dan", "Ross", "Exercise 1.4"));
 
 //new line
-console.log("")
+console.log("");
 
 //call the driveIt function and pass the vehicle objects. These get assigned the prototype "start"
 driveIt(celica);

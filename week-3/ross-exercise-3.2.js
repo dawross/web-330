@@ -35,10 +35,10 @@ function MySql(properties) {
  * Description: Oracle Database class
  */
 function Oracle(properties) {
-  this.username = properties.username;
-  this.password = properties.password;
-  this.server = properties.server;
-  this.version = properties.version;
+  this.username = properties.username || "admin" ;
+  this.password = properties.password || "sdf6764^";
+  this.server = properties.server || "localhost:8080"
+  this.version = properties.version || "3.5";
 }
 /**
  * Argument: properties
@@ -46,9 +46,9 @@ function Oracle(properties) {
  * Description: Informix Database class
  */ 
 function Informix(properties) {
-  this.username = properties.username;
-  this.password = properties.password;
-  this.server = properties.server;
+  this.username = properties.username || "admin";
+  this.password = properties.password || "3ffg6&a5%";
+  this.server = properties.server || "localhost:3000";
 }
 
 function DatabaseFactory() {}
