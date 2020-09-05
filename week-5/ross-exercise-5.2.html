@@ -1,0 +1,57 @@
+<!-- ============================================
+; Title: Exercise 5.2
+; Author: Dan Ross
+; Date: 5 September 2020
+; Description: The Proxy Pattern
+;===========================================
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Exercise 5.2 - The Proxy Pattern</title>
+
+    <!-- jquery Reference Library -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">Home</a>
+    </nav>
+    <br /><br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Exercise 5.2 - The Proxy Pattern</h2>
+
+          <button class="btn btn-primary" id="btnPreviewProxy">Preview Proxy</button>
+          <br />
+          <span id="spanProxyResults"></span>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        var drums = {
+          brand: "Tama",
+          series: "Superstar Classic",
+          wood: "Maple",
+          display: function () {
+            //clears the span tag before adding new content
+            $("#spanProxyResults").html("");
+            //appends to span tag
+            $("#spanProxyResults").append("<br>Brand: " + this.brand + "<br>" + "Series: " + this.series + "<br>" + "Wood: " + this.wood);
+          },
+        };
+        //button click will display the drum object using the display function
+        $("#btnPreviewProxy").click($.proxy(drums, "display"));
+      });
+    </script>
+  </body>
+</html>
