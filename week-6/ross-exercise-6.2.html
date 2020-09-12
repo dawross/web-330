@@ -1,3 +1,12 @@
+
+<!-- ============================================
+; Title: Exercise 6.2
+; Author: Dan Ross
+; Date: 12 September 2020
+; Description: ViewModel Function Objects
+;=========================================== -->
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,12 +57,13 @@
       </div>
     </div>
     <script>
+      //view model with observables
       function personViewModel() {
         this.firstName = ko.observable("Dan");
         this.lastName = ko.observable("Ross");
         this.emailAddress = ko.observable("evildead73@gmail.com");
       }
-
+      // Activates knockout.js
       ko.applyBindings(new personViewModel());
     </script>
   </body>
