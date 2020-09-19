@@ -1,0 +1,84 @@
+<!-- ============================================
+; Title: Exercise 7.3
+; Author: Dan Ross
+; Date: 19 September 2020
+; Description: The "foreach" Binding
+;=========================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Exercise 7.2</title>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Libraries -->
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/5DACB2B0-5003-6543-8B39-D8EE6E4FC44C/main.js" charset="UTF-8"></script>
+    <script src="../knockout-3.5.1.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <div role="main" class="container">
+      <br />
+      <br />
+
+      <h1>The "foreach" binding example</h1>
+
+      <table class="table table-dark table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: textbook">
+          <tr>
+            <td data-bind="text: title"></td>
+            <td data-bind="text: price"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      //Textbook object with title and price
+      function TextbookViewModel() {
+        this.textbook = ko.observableArray([
+          { title: "NoSQL Distilled", price: 36.99 },
+          { title: "MongoDB", price: 50.98 },
+          { title: "Express in Action", price: 39.99 },
+          { title: "Learning JavaScript Design Patterns", price: 38.98 },
+        ]);
+      }
+      //Activates knockout.js
+      ko.applyBindings(new TextbookViewModel());
+    </script>
+  </body>
+</html>
