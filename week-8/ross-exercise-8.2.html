@@ -64,7 +64,7 @@
         this.nameToAdd = ko.observable("");
         this.employeeList = ko.observableArray(["Dan Ross", "Chloe Ross"]);
         this.error = ko.observable("");
-         
+
         //function to add employee to list. Will show error if duplicate or empty
         this.add = function () {
           if (this.nameToAdd() !== "" && this.employeeList.indexOf(this.nameToAdd()) < 0) {

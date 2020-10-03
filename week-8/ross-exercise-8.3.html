@@ -23,12 +23,11 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
+
     <!-- JavaScript Libraries -->
     <script src="../knockout-3.5.1.js"></script>
   </head>
   <body>
-    
     <div role="main" class="container">
       <br /><br />
       <div class="row" data-bind="if: error">
@@ -98,7 +97,13 @@
         this.Name = name;
       }
       //data for list of employees
-      var EmployeeList = [new Employee(1, "Dan Ross"), new Employee(2, "Brann Dailor"), new Employee(3, "Brent Hinds"), new Employee(4, "Bill Kelliher"), new Employee(5, "Troy Sanders")];
+      var EmployeeList = [
+        new Employee(1, "Dan Ross"),
+        new Employee(2, "Brann Dailor"),
+        new Employee(3, "Brent Hinds"),
+        new Employee(4, "Bill Kelliher"),
+        new Employee(5, "Troy Sanders"),
+      ];
       //Employee view model
       function EmployeeViewModel() {
         var self = this;
